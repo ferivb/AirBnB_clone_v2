@@ -17,10 +17,6 @@ sudo mkdir -p /data/web_static/shared/
 # Symlink for the test folder
 sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 
-# Give ownership to ubuntu user/group
-sudo chown -R ubuntu /data/
-sudo chgrp -R ubuntu /data/
-
 #unlinks the default file
 unlink /etc/nginx/sites-enabled/default
 
@@ -56,6 +52,10 @@ echo "<html>
 
 #creates the index file
 echo "Ceci n'est pas une page" > /var/www/ferivb.tech/html/custom_404.html;
+
+# Give ownership to ubuntu user/group
+sudo chown -R ubuntu /data/
+sudo chgrp -R ubuntu /data/
 
 #restarts the server
 sudo service nginx restart
