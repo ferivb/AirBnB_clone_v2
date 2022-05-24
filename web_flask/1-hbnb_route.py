@@ -13,7 +13,7 @@ def display_hello():
 
 @app.route('/hbnb', strict_slashes=False)
 def display_HBNB():
-    """ Prints Hello HBNB! on root '/'"""
+    """ Prints HBNB! on '/hbnb'"""
     return "HBNB!"
 
 
